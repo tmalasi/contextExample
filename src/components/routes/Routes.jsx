@@ -1,12 +1,16 @@
-import { Routes as AppRoutes, Route } from "react-router-dom";
-import React, { useState, Suspense, lazy } from "react";
-import HomePage from "../homepage/HomePage";
+// Routes.js
+import { Routes as AppRoutes, Route, BrowserRouter} from 'react-router-dom';
+import HomePage from '../homepage/HomePage';
+import TodoList from '../toDoDisplay/ToDoList';
 
 const Routes = () => {
   return (
-      <AppRoutes>
-        <Route path="/" element={<HomePage />} />
-      </AppRoutes>
+    <BrowserRouter> 
+    <AppRoutes>    
+      <Route path="/" element={<HomePage />} />
+      <Route path='/todos' element={<TodoList/>}/>
+    </AppRoutes>
+    </BrowserRouter>
   );
 };
 

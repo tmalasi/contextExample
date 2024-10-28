@@ -1,15 +1,12 @@
-
-import './App.css'
-import { BrowserRouter } from "react-router-dom";
+import './App.css';
 import Routes from './components/routes/Routes';
+import {ToDoProvider } from './components/context/ToDoContext';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div>
-        <Routes/>
-      </div>
-    </BrowserRouter>
+    <ToDoProvider>
+        <Routes />
+    </ToDoProvider>
   );
 }
 
